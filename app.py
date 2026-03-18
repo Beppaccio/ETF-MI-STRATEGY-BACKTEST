@@ -72,17 +72,17 @@ threading.Thread(target=_self_ping, daemon=True, name="self-ping").start()
 # =============================================================================
 
 ETF_UNIVERSE = {
-    "EXV1.MI": {"name": "Banks EU 600",      "sector": "Bancario",    "color": "#185FA5"},
-    "EXH7.MI": {"name": "Oil & Gas EU 600",  "sector": "Energia",     "color": "#BA7517"},
-    "EXV4.MI": {"name": "Healthcare EU 600", "sector": "Healthcare",  "color": "#1D9E75"},
-    "EXH4.MI": {"name": "Industrial EU 600", "sector": "Industriali", "color": "#534AB7"},
-    "EXV5.MI": {"name": "Technology EU 600", "sector": "Tecnologia",  "color": "#D85A30"},
-    "EXH9.MI": {"name": "Utilities EU 600",  "sector": "Utilities",   "color": "#639922"},
-    "EXH5.MI": {"name": "Insurance EU 600",  "sector": "Assicur.",    "color": "#993556"},
-    "EXH2.MI": {"name": "Basic Resources",   "sector": "Risorse",     "color": "#5F5E5A"},
+    "EXV1.DE": {"name": "Banks EU 600",      "sector": "Bancario",    "color": "#185FA5"},
+    "EXH7.DE": {"name": "Oil & Gas EU 600",  "sector": "Energia",     "color": "#BA7517"},
+    "EXV4.DE": {"name": "Healthcare EU 600", "sector": "Healthcare",  "color": "#1D9E75"},
+    "EXH4.DE": {"name": "Industrial EU 600", "sector": "Industriali", "color": "#534AB7"},
+    "EXV5.DE": {"name": "Technology EU 600", "sector": "Tecnologia",  "color": "#D85A30"},
+    "EXH9.DE": {"name": "Utilities EU 600",  "sector": "Utilities",   "color": "#639922"},
+    "EXH5.DE": {"name": "Insurance EU 600",  "sector": "Assicur.",    "color": "#993556"},
+    "EXH2.DE": {"name": "Basic Resources",   "sector": "Risorse",     "color": "#5F5E5A"},
 }
-CASH_ETF  = {"ticker": "XEON.MI", "name": "EUR Overnight"}
-BENCHMARK = {"ticker": "EXSA.MI", "name": "STOXX Europe 600", "color": "#888780"}
+CASH_ETF  = {"ticker": "XEON.DE", "name": "EUR Overnight"}
+BENCHMARK = {"ticker": "EXSA.DE", "name": "STOXX Europe 600", "color": "#888780"}
 
 # =============================================================================
 #  LOGICA BACKTEST
