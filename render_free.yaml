@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: dual-momentum-etf
+    runtime: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    # --timeout 0  → disabilita il kill del worker dopo 30s (cruciale per il free tier)
+    # --workers 1  → il free tier ha 512 MB RAM, un solo worker evita OOM
+    # --threads 4  → gestisce richieste di polling mentre il backtest gira
+    startCommand: gunicorn app:app --workers 1 --threads 4 --timeout 0 --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+    healthCheckPath: /health
