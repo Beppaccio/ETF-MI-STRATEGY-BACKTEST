@@ -1,0 +1,14 @@
+services:
+  - type: cron
+    name: dual-momentum-backtest
+    runtime: python
+    region: frankfurt          # server EU, più vicino a Milano
+    plan: starter              # $1/mese minimo (fatturato solo sul tempo di esecuzione)
+    buildCommand: pip install -r requirements.txt
+    startCommand: python dual_momentum_backtest.py
+    schedule: "0 7 1 * *"     # ogni primo del mese alle 07:00 UTC (09:00 ora italiana)
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: OUTPUT_DIR
+        value: /tmp/backtest_output  # Render non ha disco persistente sul cron
