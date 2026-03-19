@@ -222,7 +222,7 @@ def _fig_b64(fig):
 
 _STYLE = {
     "figure.facecolor": "#FAFAF8", "axes.facecolor": "#FAFAF8",
-    "axes.grid": True, "axes.grid.alpha": 0.25, "grid.color": "#CCCCCC",
+    "axes.grid": True, "grid.alpha": 0.25, "grid.color": "#CCCCCC",
     "axes.spines.top": False, "axes.spines.right": False,
     "axes.spines.left": False, "axes.spines.bottom": False,
     "font.family": "sans-serif", "font.size": 10,
